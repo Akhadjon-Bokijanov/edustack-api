@@ -23,7 +23,7 @@ class CreatePaymeTransactionsTable extends Migration
             $table->string("cancel_time")->nullable();
             $table->decimal("amount");
             $table->integer("reason")->nullable();
-            $table->integer("email");
+            $table->string("email")->index();
             $table->text("description")->nullable();
             $table->integer('state')->default(1);
 
