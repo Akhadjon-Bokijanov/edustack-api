@@ -10,16 +10,15 @@ use \Carbon\Carbon;
 class PaymeTransactionController extends Controller
 {
     const USERNAME = 'Paycom';
-    const PASSWORD = '8c&?y?&fUWa%ygdTorG0jY?EG%x6XGPowFOr'; //this is test key
+    const PASSWORD = 'MASO%bh@tEEpJpQeoRGAzjNwEFPntFCnRObg'; //this is test key
 
-    const PASSWORD_TEST = 'rw6P3oT1eDArP7jE6KyIyBqboou#SxG6ZQT7';
+    const PASSWORD_TEST = '?M5aPJprb09SoV%Tt26R%puOmC56#QUpkANv';
     const METHOD_CHECK_PERFORM_TRANSACTION = 'CheckPerformTransaction';
     const METHOD_CREATE_TRANSACTION = 'CreateTransaction';
     const METHOD_CHECK_TRANSACTION = 'CheckTransaction';
     const METHOD_PERFORM_TRANSACTION = 'PerformTransaction';
     const METHOD_CANCEL_TRANSACTION = 'CancelTransaction';
     const METHOD = 'method';
-    public $enableCsrfValidation = false;
 
     const CODE_UNAUTHORIZE = -32504;
     const CODE_OLYMPIAD_NOT_FOUND = -31050;
