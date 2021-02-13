@@ -204,7 +204,7 @@ class PaymeTransactionController extends Controller
 
             $recent_transaction = PaymeTransaction::where(
                 [
-                    "tin"=>$request["params"]["account"]["tin"],
+                    "email"=>$request["params"]["account"]["email"],
                     "amount"=>$request["params"]["amount"],
                 ])
                 ->where("transaction_id","!=", $request["params"]["id"])
@@ -230,7 +230,7 @@ class PaymeTransactionController extends Controller
         if(empty($transaction)) {
             $transaction = new PaymeTransaction();
             $transaction->transaction_id = $request['params']['id'];
-            $transaction->tin = $request['params']['account']['tin'];
+            $transaction->email = $request['params']['account']['email'];
             $transaction->transaction_create_time = $request['params']['time'];
             $transaction->create_time = (int)($transaction->create_time == null ? round(microtime(true) * 1000) : $transaction->create_time);
         }
