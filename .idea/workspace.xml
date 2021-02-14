@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="745905d1-00e3-4072-86bd-c03f56c307fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_13_193656_create_payme_transactions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_13_193656_create_payme_transactions_table.php" afterDir="false" />
-    </list>
+    <list default="true" id="745905d1-00e3-4072-86bd-c03f56c307fc" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,7 +164,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613242612121</updated>
-      <workItem from="1613242617182" duration="16478000" />
+      <workItem from="1613242617182" duration="16901000" />
     </task>
     <servers />
   </component>
