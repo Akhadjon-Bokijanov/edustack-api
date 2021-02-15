@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\UserController;
 use \App\Http\Controllers\PaymeTransactionController;
+use \App\Http\Controllers\ExerciseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,10 @@ Route::prefix("v1")->group(function (){
         Route::post("/verify", "\App\Helpers\UserHelper@verifyUser")->name("verification");
 
         Route::apiResource("users", UserController::class);
+
+        Route::apiResource("exercises", ExerciseController::class);
+
+        Route::post("users/avatar", '\App\Helpers\S3Helper@uploadAvatar')->name("user-upload");
     });
 
     Route::apiResource("payme", PaymeTransactionController::class);

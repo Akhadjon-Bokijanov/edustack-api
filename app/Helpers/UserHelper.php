@@ -14,13 +14,16 @@ class UserHelper
     public static function verifyUser(Request $request){
         try {
 
-            $data = $request->only(["id", "vToken"]);
+            $data = $request->only(["vToken"]);
+
             $user = User::find(auth()->user()->id)->first();
-            if (empty($user)){
-                if ($user->verification_code===$data["vToken"]){
+
+            if (!empty($user)){
+                if ((integer)$user->verification_code===(integer)$data["vToken"]){
                     $user->email_verified_at = now(env("APP_LOCALE", "Asia/Tashkent"));
                     if ($user->save()){
-                        return $user;
+
+                        return ["user"=>$user];
                     }
                 }else{
                     return response()->json([
@@ -28,6 +31,7 @@ class UserHelper
                     ], 401);
                 }
             }
+            return response()->json("User not found", 401);
         }catch (\Exception $exception){
             return $exception->getMessage();
         }

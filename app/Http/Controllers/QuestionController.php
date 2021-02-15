@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Question;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class QuestionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Question  $question
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Question $question)
     {
         //
     }
@@ -43,34 +43,21 @@ class UserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Question  $question
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, Question $question)
     {
         //
-        try {
-            if ($user){
-                $data = $request->all();
-                    $data["dateOfBirth"] = date('Y-m-d 00:00:00', strtotime($data["dateOfBirth"]));
-                if ($user->update($data)){
-
-                    return ["user"=>$user];
-                }
-                return response()->json("fail to update", 500);
-            }
-        }catch (\Exception $exception){
-            return $exception->getMessage();
-        }
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Question  $question
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Question $question)
     {
         //
     }

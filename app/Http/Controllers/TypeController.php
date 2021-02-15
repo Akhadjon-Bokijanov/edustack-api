@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class TypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -46,22 +45,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
         //
-        try {
-            if ($user){
-                $data = $request->all();
-                    $data["dateOfBirth"] = date('Y-m-d 00:00:00', strtotime($data["dateOfBirth"]));
-                if ($user->update($data)){
-
-                    return ["user"=>$user];
-                }
-                return response()->json("fail to update", 500);
-            }
-        }catch (\Exception $exception){
-            return $exception->getMessage();
-        }
     }
 
     /**
