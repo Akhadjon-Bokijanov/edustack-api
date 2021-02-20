@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
     use HasFactory;
+
+    protected $guarded=[];
+
+    public function user(){
+        return $this->belongsTo(User::class)
+            ->select(["id", "avatar", "firstName", "lastName"]);
+    }
+
+    public function types(){
+        return $this->belongsToMany(Type::class);
+    }
+
+    public function questionAnswers(){
+        return $this->hasMany(QuestionAnswer::class);
+    }
 }

@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="745905d1-00e3-4072-86bd-c03f56c307fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Helpers/S3Helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/edustack-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/edustack-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/UserHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/UserHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/S3Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/S3Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionAnswerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionAnswerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionAnswerLikeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionAnswerLikeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Question.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Question.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/QuestionAnswer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/QuestionAnswer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/QuestionAnswerLike.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/QuestionAnswerLike.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Type.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Type.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +187,13 @@
       <workItem from="1613282153945" duration="10794000" />
       <workItem from="1613319687649" duration="9587000" />
       <workItem from="1613363373455" duration="583000" />
-      <workItem from="1613391522724" duration="8517000" />
+      <workItem from="1613391522724" duration="22955000" />
+      <workItem from="1613450245596" duration="136000" />
+      <workItem from="1613477543145" duration="13610000" />
+      <workItem from="1613537879185" duration="376000" />
+      <workItem from="1613552443895" duration="4736000" />
+      <workItem from="1613632662123" duration="564000" />
+      <workItem from="1613755046685" duration="11119000" />
     </task>
     <servers />
   </component>

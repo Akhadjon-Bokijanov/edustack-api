@@ -26,6 +26,18 @@ class QuestionAnswerLikeController extends Controller
     public function store(Request $request)
     {
         //
+        try {
+            $i = $request->only(["question_answer_id"]);
+            if (empty(QuestionAnswerLike::where(["user_id"=>auth()->id(), "question_answer_id"=>$i])->first())){
+                $a = new QuestionAnswerLike();
+                $i["user_id"] = auth()->id();
+                QuestionAnswerLike::create($i);
+            }
+
+            return ["ok"=>true, "message"=>"success"];
+        }catch (\Exception $exception){
+            return $exception->getMessage();
+        }
     }
 
     /**

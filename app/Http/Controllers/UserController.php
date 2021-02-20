@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\S3Helper;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -52,9 +53,17 @@ class UserController extends Controller
         try {
             if ($user){
                 $data = $request->all();
-                    $data["dateOfBirth"] = date('Y-m-d 00:00:00', strtotime($data["dateOfBirth"]));
-                if ($user->update($data)){
 
+                if (!empty($data["avatar"]) && $user->avatar){
+                    //return ["req"=>$data["avatar"], "user_a"=>$user->avatar];
+                    S3Helper::deleteFile($user->avatar);
+                }
+
+                if (!empty($data["dateOfBirth"])){
+                    $data["dateOfBirth"] = date('Y-m-d 00:00:00', strtotime($data["dateOfBirth"]));
+                }
+
+                if ($user->update($data)){
                     return ["user"=>$user];
                 }
                 return response()->json("fail to update", 500);

@@ -26,6 +26,15 @@ class QuestionAnswerController extends Controller
     public function store(Request $request)
     {
         //
+        try {
+            $data = $request->only(["question_id", "answer"]);
+            $data["user_id"] = auth()->id();
+            QuestionAnswer::create($data);
+
+            return ["ok"=>true, "message"=>"success"];
+        }catch (\Exception $exception){
+            return $exception->getMessage();
+        }
     }
 
     /**
@@ -60,5 +69,16 @@ class QuestionAnswerController extends Controller
     public function destroy(QuestionAnswer $questionAnswer)
     {
         //
+        try {
+            if (!empty($questionAnswer) && (auth()->user()->role===2 || auth()->id()===$questionAnswer->user_id)){
+                $questionAnswer->delete();
+                return ["ok"=>true, "message"=>"success"];
+            }
+
+            return response("fail to delete", 500);
+        }catch (\Exception $exception){
+            return $exception->getMessage();
+        }
+
     }
 }

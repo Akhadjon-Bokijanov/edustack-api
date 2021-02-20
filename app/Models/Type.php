@@ -14,4 +14,8 @@ class Type extends Model
     public function exercises(){
         return $this->belongsToMany(Exercise::class);
     }
+
+    public function questions(){
+        return $this->belongsToMany(Question::class);
+    }
 }
